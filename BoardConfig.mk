@@ -49,6 +49,10 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
+# Assert
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+TARGET_OTA_ASSERT_DEVICE := vince
+
 # Audio
 AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
 AUDIO_FEATURE_ENABLED_ALAC_OFFLOAD := true
@@ -198,6 +202,10 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/inpu
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_USE_SDCLANG := true
+
+# Releasetools
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_vince
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
