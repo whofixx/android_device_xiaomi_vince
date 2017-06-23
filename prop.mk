@@ -17,6 +17,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.audio.fluence.speaker=true \
 	persist.vendor.audio.fluence.voicecall=true \
 	persist.vendor.audio.fluence.voicerec=true \
+    ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=7 \
 	persist.vendor.btstack.enable.splita2dp=false \
 	ro.af.client_heap_size_kbyte=7168 \
@@ -112,7 +113,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.gralloc.enable_fb_ubwc=1 \
 	vendor.display.disable_rotator_downscale=1 \
 	debug.sf.latch_unsignaled=1
-
 	
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
