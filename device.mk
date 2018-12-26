@@ -25,7 +25,6 @@ $(call inherit-product, vendor/xiaomi/vince/vince-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
@@ -37,6 +36,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
+
+# Keyhandler
+PRODUCT_PACKAGES += \
+    org.pixelexperience.keyhandler
 
 # Permissions
 PRODUCT_COPY_FILES += \
