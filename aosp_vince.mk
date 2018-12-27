@@ -32,6 +32,7 @@ IS_GO_VERSION := true
 CUSTOM_BUILD_TYPE := OFFICIAL
 
 # Inherit some common aospOS AEX on/off stuff.
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 #$(call inherit-product, vendor/aosp/config/common.mk)
 #IS_GO_VERSION := true
 #EXTENDED_BUILD_TYPE=OFFICIAL
