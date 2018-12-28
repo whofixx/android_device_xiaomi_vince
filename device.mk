@@ -162,6 +162,10 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     vendor.display.config@1.0 \
     vendor.display.config@1.0_vendor
+
+# WFD
+ PRODUCT_PACKAGES += \
+     libnl
 	
 PRODUCT_BOOT_JARS += \
     WfdCommon

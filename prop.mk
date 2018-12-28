@@ -111,6 +111,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.gralloc.enable_fb_ubwc=1 \
 	debug.sf.latch_unsignaled=1 \
 	vendor.display.perf_hint_window=50 
+
+##property to choose between virtual/external wfd display
+ PRODUCT_PROPERTY_OVERRIDES += \
+     persist.sys.wfd.virtual=0
 	
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
