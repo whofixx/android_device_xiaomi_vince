@@ -184,6 +184,9 @@ on boot
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/blue/brightness
+	
+	# White flashlight
+    write /sys/devices/soc/qpnp-flash-led-26/leds/led:torch_1/max_brightness 0
 
     # Allow access to emmc rawdump block partition and dload sysfs node
     chown root system /dev/block/bootdevice/by-name/rawdump -p /dev/block/
