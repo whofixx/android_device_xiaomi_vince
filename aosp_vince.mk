@@ -21,23 +21,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from vince device
 $(call inherit-product, device/xiaomi/vince/device.mk)
 
-
-TARGET_BOOT_ANIMATION_RES := 1080
-
-# Inherit some common aospOS PE on/off stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-TARGET_GAPPS_ARCH := arm64
-TARGET_MINIMAL_APPS := false
+#all
 IS_GO_VERSION := true
-CUSTOM_BUILD_TYPE := OFFICIAL
+TARGET_INCLUDE_STOCK_ARCORE := true
 
-# Inherit some common aospOS AEX on/off stuff.
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-#$(call inherit-product, vendor/aosp/config/common.mk)
-#IS_GO_VERSION := true
-#EXTENDED_BUILD_TYPE=OFFICIAL
+# On for(PE)
+#$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+#TARGET_BOOT_ANIMATION_RES := 1080
+#TARGET_GAPPS_ARCH := arm64
+#TARGET_MINIMAL_APPS := false
+#CUSTOM_BUILD_TYPE := OFFICIAL
 
-# Device identifier. This must come after all inclusions
+# On for(AEX)
+$(call inherit-product, vendor/aosp/common.mk)
+TARGET_BOOT_ANIMATION_RES := 2140
+EXTENDED_BUILD_TYPE := OFFICIAL
+
+# Inherit from custom vendor
+
+#Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
 PRODUCT_NAME := aosp_vince
 PRODUCT_BRAND := Xiaomi
@@ -49,7 +51,7 @@ BOARD_VENDOR := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="vince" \
-	TARGET_DEVICE="vince"
+    PRODUCT_NAME="Xiaomi Redmi 5 Plus" \
+    DEVICE_MAINTAINERS="waiser"
 
 
