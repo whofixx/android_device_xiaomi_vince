@@ -177,14 +177,6 @@ on boot
     # bond0 used by FST Manager
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
 
-    # Notification LED
-    chown system system /sys/class/leds/red/blink
-    chown system system /sys/class/leds/green/blink
-    chown system system /sys/class/leds/blue/blink
-    chown system system /sys/class/leds/red/brightness
-    chown system system /sys/class/leds/green/brightness
-    chown system system /sys/class/leds/blue/brightness
-	
     # White flashlight
     write /sys/devices/soc/qpnp-flash-led-24/leds/led:flash_1/max_brightness 0
     write /sys/devices/soc/qpnp-flash-led-24/leds/led:torch_1/max_brightness 0
