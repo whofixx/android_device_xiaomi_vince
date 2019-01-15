@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2017-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -171,6 +171,9 @@ DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 TARGET_INIT_VENDOR_LIB := libinit_msm8953
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8953
+
+# Keymaster
+TARGET_PROVIDES_KEYMASTER := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
