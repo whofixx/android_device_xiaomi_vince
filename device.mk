@@ -176,10 +176,6 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
     libebtc
-	
-# Doze mode
-PRODUCT_PACKAGES += \
-    XiaomiDoze
 
 # FM
 PRODUCT_PACKAGES += \
@@ -285,6 +281,10 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
+	
+# Xiaomi Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
 
 # Power
 PRODUCT_PACKAGES += \
