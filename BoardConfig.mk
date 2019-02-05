@@ -92,7 +92,8 @@ BLUETOOTH_HCI_USE_MCT := true
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
-TARGET_USES_QTI_CAMERA_DEVICE := true
+BOARD_QTI_CAMERA_32BIT_ONLY := true
+TARGET_TS_MAKEUP := true
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -154,6 +155,9 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 # GPS
 USE_DEVICE_SPECIFIC_GPS := true
 TARGET_NO_RPC := true
+
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
