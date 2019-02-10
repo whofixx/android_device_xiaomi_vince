@@ -112,7 +112,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.display.disable_rotator_downscale=1 \
 	debug.sf.latch_unsignaled=1
 
-	
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
