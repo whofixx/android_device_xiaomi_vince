@@ -136,12 +136,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    camera.device@3.2-impl \
-    camera.msm8953 \
-    libmm-qcamera \
-    Snap \
     vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor
+    vendor.qti.hardware.camera.device@1.0_vendor \
+    Gcam
 
 # Consumerir
 PRODUCT_PACKAGES += \
@@ -186,10 +183,6 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
     libebtc
-
-# Doze mode
-PRODUCT_PACKAGES += \
-    XiaomiDoze
 
 # FM
 PRODUCT_PACKAGES += \
@@ -299,6 +292,10 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
+
+#  Xiaomi Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
 
 # Power
 PRODUCT_PACKAGES += \

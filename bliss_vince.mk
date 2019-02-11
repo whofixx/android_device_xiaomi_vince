@@ -16,7 +16,7 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from vince device
 $(call inherit-product, device/xiaomi/vince/device.mk)
@@ -40,3 +40,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "xiaomi/vince/vince:8.1.0/OPM1.171019.019/V10.0.4.0.OEGMIFH:user/release-keys"
+
+# Apps
+PRODUCT_PACKAGES += \
+    Gallery2 \
+    Calendar \
+    DeskClock \
+    Email
