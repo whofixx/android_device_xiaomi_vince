@@ -51,4 +51,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     FMRadio \
     Lawnchair \
-    Retro
+    Retro \
+    SoundRecorder \
+    SpareParts \
+    WallpaperPicker
