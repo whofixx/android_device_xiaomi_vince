@@ -43,7 +43,12 @@ BUILD_FINGERPRINT := "xiaomi/vince/vince:8.1.0/OPM1.171019.019/V10.0.4.0.OEGMIFH
 
 # Apps
 PRODUCT_PACKAGES += \
+    ViaBrowser \
     Gallery2 \
     Calendar \
     DeskClock \
-    Email
+    Email \
+    ExactCalculator \
+    FMRadio \
+    Lawnchair \
+    Retro

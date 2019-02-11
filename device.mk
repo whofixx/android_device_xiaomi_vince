@@ -186,7 +186,6 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FMRadio \
     libfmjni
 
 # Gatekeeper HAL
@@ -292,10 +291,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
-
-#  Xiaomi Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
 
 # Power
 PRODUCT_PACKAGES += \
