@@ -18,8 +18,6 @@ DEVICE_PATH := device/xiaomi/vince
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
-USE_LEGACY_AUDIO_POLICY := 0
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -75,7 +73,7 @@ AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := false
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
-USE_CUSTOM_AUDIO_POLICY := 0
+USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bootloader
@@ -217,9 +215,8 @@ TARGET_RIL_VARIANT := caf
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 
 # SELinux
-# include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
-BOARD_SEPOLICY_VERS := 28.0
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2019-02-05
