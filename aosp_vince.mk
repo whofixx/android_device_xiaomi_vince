@@ -21,23 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from vince device
 $(call inherit-product, device/xiaomi/vince/device.mk)
 
-#all
-IS_GO_VERSION := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-
-# On for(PE)
-#$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-#TARGET_BOOT_ANIMATION_RES := 1080
-#TARGET_GAPPS_ARCH := arm64
-#TARGET_MINIMAL_APPS := false
-#CUSTOM_BUILD_TYPE := OFFICIAL
-
-# On for(AEX)
-$(call inherit-product, vendor/aosp/common.mk)
-TARGET_BOOT_ANIMATION_RES := 2140
-EXTENDED_BUILD_TYPE := OFFICIAL
-
-# Inherit from custom vendor
+TARGET_BOOT_ANIMATION_RES := 1080
 
 #Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
@@ -51,7 +35,7 @@ BOARD_VENDOR := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="Xiaomi Redmi 5 Plus" \
-    DEVICE_MAINTAINERS="waiser"
+    PRIVATE_BUILD_DESC="vince-user 8.1.0 OPM1.171019.019 V10.0.4.0.OEGMIFH release-keys"
 
-
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := "xiaomi/vince/vince:8.1.0/OPM1.171019.019/V10.0.4.0.OEGMIFH:user/release-keys"
