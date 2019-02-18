@@ -172,10 +172,6 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
     libebtc
-
-# XiaomiParts mode
-PRODUCT_PACKAGES += \
-    XiaomiParts
 	
 # Doze mode
 PRODUCT_PACKAGES += \
