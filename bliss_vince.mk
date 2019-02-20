@@ -48,5 +48,4 @@ PRODUCT_PACKAGES += \
     DeskClock \
     Email \
     ExactCalculator \
-    FMRadio \
     SoundRecorder
