@@ -1,1 +1,3 @@
 r_dir_file(healthd, sysfs_batteryinfo)
+allow healthd sysfs:file { read open };
+allow healthd sysfs:file { getattr };
