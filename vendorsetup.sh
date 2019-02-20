@@ -1,1 +1,1 @@
-add_lunch_combo ancient_vince-userdebug
+add_lunch_combo superior_vince-userdebug
