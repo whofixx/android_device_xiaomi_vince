@@ -15,7 +15,6 @@ allow priv_app firmware_file:filesystem { getattr };
 allow priv_app proc:file { read };
 allow priv_app sysfs:file { read };
 allow priv_app ctl_bootanim_prop:file { read };
-allow priv_app adbtcp_prop:file { read };
 allow priv_app ctl_bugreport_prop:file { read };
 allow priv_app ctl_console_prop:file { read };
 allow priv_app ctl_default_prop:file { read };

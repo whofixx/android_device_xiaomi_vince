@@ -12,7 +12,6 @@ allow untrusted_app proc_vmstat:file { read open };
 allow untrusted_app proc_vmstat:file { getattr };
 allow untrusted_app runtime_event_log_tags_file:file { read open };
 allow untrusted_app ctl_bootanim_prop:file { read };
-allow untrusted_app adbtcp_prop:file { read };
 allow untrusted_app ctl_bugreport_prop:file { read };
 allow untrusted_app ctl_console_prop:file { read };
 allow untrusted_app ctl_default_prop:file { read };
