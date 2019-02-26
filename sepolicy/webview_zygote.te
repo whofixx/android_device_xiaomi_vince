@@ -1,2 +1,0 @@
-allow webview_zygote theme_data_file:file { read open };
-allow webview_zygote theme_data_file:file { getattr };
