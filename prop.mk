@@ -75,6 +75,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.camera.eis.enable=1 \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
+# Custom Prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    windowsmgr.max_events_per_sec=150
+    ro.max.fling_velocity=15000
+    ro.min.fling_velocity=8000
+    touch.pressure.scale=0.001
+
 # ADB
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.debuggable=1 \
