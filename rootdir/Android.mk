@@ -119,7 +119,7 @@ LOCAL_MODULE       := init.spectrum.rc
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := init.spectrum.rc
-LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_BOOT_RAMDISK)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -127,5 +127,5 @@ LOCAL_MODULE       := init.spectrum.sh
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := init.spectrum.sh
-LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_BOOT_RAMDISK)
 include $(BUILD_PREBUILT)
