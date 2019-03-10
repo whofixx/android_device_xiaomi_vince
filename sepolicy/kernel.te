@@ -1,1 +1,2 @@
-allow kernel kernel:system { module_request };
+allow kernel kernel:security { setenforce };
+allow kernel init:process { noatsecure };

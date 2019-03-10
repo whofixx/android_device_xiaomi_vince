@@ -5,6 +5,8 @@ allow init sysfs_devices_system_cpu:file write;
 allow init sysfs_leds:lnk_file read;
 allow init fingerprintd_device:chr_file setattr;
 allow init hal_perf_default:binder { call };
+allow init vendor_init:process { noatsecure }
+allow init cgroup:file { create }
 
 # allow init to access sysfs_cpu_boost
 allow init sysfs_cpu_boost:file w_file_perms;
