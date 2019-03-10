@@ -2,3 +2,5 @@
 r_dir_file(netmgrd, sysfs_msm_subsys)
 
 set_prop(netmgrd, vendor_xlat_prop)
+
+allow netmgrd kernel:system module_request;

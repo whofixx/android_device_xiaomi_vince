@@ -73,5 +73,6 @@ allow hal_fingerprint_default fingerprintd_data_file:dir { remove_name };
 allow hal_fingerprint_default fingerprintd_data_file:file { rename };
 allow hal_fingerprint_default fingerprintd_data_file:dir { add_name };
 allow hal_fingerprint_default fingerprintd_data_file:file { unlink };
-allow hal_fingerprint_default media_rw_data_file:dir search;
-allow hal_fingerprint_default sdcardfs:file read append;
+allow hal_fingerprint_default media_rw_data_file:dir search read open;
+allow hal_fingerprint_default sdcardfs:file read append open;
+allow hal_fingerprint_default media_rw_data_file:file getattr;
