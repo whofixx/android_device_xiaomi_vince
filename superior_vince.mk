@@ -23,6 +23,7 @@ $(call inherit-product, device/xiaomi/vince/device.mk)
 
 # Inherit some common Superior stuff.
 $(call inherit-product, vendor/superior/config/common.mk)
+$(call inherit-product, vendor/MiuiCamera/config.mk)
 
 TARGET_BOOT_ANIMATION_RES := 2160
 
