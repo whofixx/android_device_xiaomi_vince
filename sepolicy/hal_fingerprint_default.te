@@ -25,4 +25,3 @@ allow hal_fingerprint_default gx_fpd_data_file:file create_file_perms;
 allow hal_fingerprint_default storage_file:dir { search };
 allow hal_fingerprint_default storage_file:lnk_file { read };
 allow hal_fingerprint_default mnt_user_file:dir { search };
-allow hal_fingerprint_default mnt_user_file:lnk_file { read };
