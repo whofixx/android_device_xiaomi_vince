@@ -25,7 +25,7 @@ $(call inherit-product, device/xiaomi/vince/device.mk)
 $(call inherit-product, vendor/superior/config/common.mk)
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
-TARGET_BOOT_ANIMATION_RES := 2160
+TARGET_BOOT_ANIMATION_RES := 1080
 
 #Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
