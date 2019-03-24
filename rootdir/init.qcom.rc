@@ -491,12 +491,6 @@ service vendor.ipacm-diag /system/vendor/bin/ipacm-diag
     group radio diag oem_2901
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.ipacm /system/vendor/bin/ipacm
-    class main
-    user radio
-    group radio inet
-    writepid /dev/cpuset/system-background/tasks
-
 service vendor.dataqti /system/vendor/bin/qti
     class main
     user radio
