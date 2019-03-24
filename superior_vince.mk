@@ -26,6 +26,7 @@ $(call inherit-product, vendor/superior/config/common.mk)
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_DEFAULT_LAUNCHER := Quickstep
 
 #Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
