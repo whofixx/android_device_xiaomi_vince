@@ -17,8 +17,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.audio.fluence.speaker=true \
 	persist.vendor.audio.fluence.voicecall=true \
 	persist.vendor.audio.fluence.voicerec=true \
-    ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_steps=7 \
+        ro.config.media_vol_steps=25 \
+        ro.config.vc_call_vol_steps=7 \
 	persist.vendor.btstack.enable.splita2dp=false \
 	ro.af.client_heap_size_kbyte=7168 \
 	ro.vendor.audio.sdk.fluencetype=fluence \
@@ -71,7 +71,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.CDS=off \
     persist.camera.video.CDS=off \
     persist.camera.HAL3.enabled=1 \
-	persist.camera.eis.enable=1 \
+    persist.camera.eis.enable=1 \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
 # Custom Prop
@@ -105,7 +105,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	debug.mdpcomp.logs=0 \
 	debug.sf.enable_hwc_vds=1 \
 	debug.sf.hw=0 \
-    debug.cpurend.vsync=false \
+        debug.cpurend.vsync=false \
 	debug.sf.recomputecrop=0 \
 	dev.pm.dyn_samplingrate=1 \
 	persist.debug.wfd.enable=1 \
@@ -145,7 +145,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.loc.nlp_name=com.qualcomm.location \
 	ro.gps.agps_provider=1
 	
-#HWUI properties
+# HWUI properties
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hwui.texture_cache_size=72 \
 	ro.hwui.layer_cache_size=48 \
@@ -159,7 +159,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hwui.text_large_cache_width=2048 \
 	ro.hwui.text_large_cache_height=1024
 	
-#Enable B service adj transition by default
+# Enable B service adj transition by default
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.qti.sys.fw.bservice_enable=true \
 	ro.vendor.qti.sys.fw.bservice_limit=5 \
@@ -179,8 +179,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.dec.downscalar_width=1920 \
     vendor.vidc.disable.split.mode=1 \
     vendor.vidc.enc.disable.pq=true \
-	vendor.vidc.enc.disable_bframes=1 \
-	vendor.video.disable.ubwc=1
+    vendor.vidc.enc.disable_bframes=1 \
+    vendor.video.disable.ubwc=1
 	
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -191,7 +191,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.fw.dex2oat_thread_count=8 \
     ro.vendor.extension_library=libqti-perfd-client.so
 	
-#QTI Performance
+# QTI Performance
 PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.enable_prefetch=1 \
 	vendor.iop.enable_uxe=1 \
@@ -246,7 +246,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=20,20 \
     service.qti.ims.enabled=1 \
     telephony.lteOnCdmaDevice=1 \
-	persist.radio.aosp_usr_pref_sel=true
+    persist.radio.aosp_usr_pref_sel=true
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -296,7 +296,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libjson
 	
-#QTI performance
+# QTI performance
 PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
@@ -322,10 +322,6 @@ PRODUCT_PACKAGES += \
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
-
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_vince
 
 # RIL
 PRODUCT_PACKAGES += \
