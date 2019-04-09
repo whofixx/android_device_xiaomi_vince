@@ -577,6 +577,7 @@ etc/firmware/goodix_firmware.bin:vendor/firmware/goodix_firmware.bin
 
 # Fingerprint - from vince
 lib64/libsoftkeymaster.so:vendor/lib64/libsoftkeymaster.so
+vendor/etc/permissions/com.fingerprints.extension.xml
 vendor/framework/com.fingerprints.extension.jar
 lib64/hw/gf_fingerprint.default.so:vendor/lib64/hw/gf_fingerprint.default.so
 vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.default.so
