@@ -26,7 +26,6 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <fcntl.h>
 #include <sys/sysinfo.h>
 
 #include "vendor_init.h"

@@ -155,8 +155,7 @@ firmware_directories /vendor/firmware_mnt/image/
 # wlan
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
-/sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/queues/rx-* rps_cpus           0660   system     system
-/sys/devices/soc/a000000.qcom,wcnss-wlan/net/p2p0/queues/rx-* rps_cpus            0660   system     system
+/sys/devices/soc/a000000.qcom,wcnss-wlan/net/softap.0/queues/rx-* rps_cpus           0660   system     system
 /dev/spidev0.0            0660   system     audio
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera

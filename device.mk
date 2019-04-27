@@ -30,6 +30,37 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
+# A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    system
+
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_OPTIONAL_system=true
+
+PRODUCT_PACKAGES += \
+    otapreopt_script
+
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-service \
+    bootctrl.msm8953 \
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.msm8953 \
+    libcutils \
+    libgptutils \
+    libz
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -90,7 +121,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@4.0-impl \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@4.0-impl \
-    android.hardware.audio.effect@2.0-service \
     android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
     audio.primary.msm8953 \
@@ -127,7 +157,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    camera.device@3.2-impl \
     camera.msm8953 \
     libmm-qcamera \
     Snap \
@@ -160,9 +189,7 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libqdMetaData.system \
     libgenlock \
-    libtinyxml \
-    vendor.display.config@1.0 \
-    vendor.display.config@1.0_vendor
+    libtinyxml
 	
 PRODUCT_BOOT_JARS += \
     WfdCommon
@@ -170,7 +197,8 @@ PRODUCT_BOOT_JARS += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.1-service.clearkey
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -344,7 +372,8 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service
+    android.hardware.sensors@1.0-service \
+    libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
@@ -403,19 +432,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     libcld80211 \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
     libwpa_client \
     hostapd \
-    dhcpcd.conf \
-    wificond \
     wpa_supplicant \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+

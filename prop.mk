@@ -17,8 +17,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.audio.fluence.speaker=true \
 	persist.vendor.audio.fluence.voicecall=true \
 	persist.vendor.audio.fluence.voicerec=true \
+        ro.config.media_vol_steps=25 \
+	ro.config.vc_call_vol_steps=7 \
 	persist.vendor.btstack.enable.splita2dp=false \
-	ro.af.client_heap_size_kbyte=7168 \
 	ro.vendor.audio.sdk.fluencetype=fluence \
 	ro.vendor.audio.sdk.ssr=false \
 	vendor.audio.flac.sw.decoder.24bit=true \
@@ -80,7 +81,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Cne/Dpm
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.cne.feature=1 \
+    persist.vendor.cne.feature=1 \
     persist.dpm.feature=1
 
 # Coresight
@@ -95,6 +96,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	debug.mdpcomp.logs=0 \
 	debug.sf.enable_hwc_vds=1 \
 	debug.sf.hw=0 \
+	debug.sf.latch_unsignaled=1 \
 	debug.sf.recomputecrop=0 \
 	dev.pm.dyn_samplingrate=1 \
 	persist.debug.wfd.enable=1 \
@@ -206,16 +208,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.ims_volte_enable=1 \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
-    persist.dbg.wfc_avail_ovr=0 \
+    persist.dbg.wfc_avail_ovr=1 \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
-    persist.radio.calls.on.ims=0 \
-    persist.radio.csvt.enabled=false \
-    persist.radio.hw_mbn_update=0 \
-    persist.radio.jbims=0 \
-    persist.radio.mt_sms_ack=20 \
     persist.radio.multisim.config=dsds \
-    persist.radio.sw_mbn_update=0 \
-    persist.radio.videopause.mode=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
@@ -225,8 +220,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.default_network=20,20 \
     service.qti.ims.enabled=1 \
-    telephony.lteOnCdmaDevice=1 \
-	persist.radio.aosp_usr_pref_sel=true
+    persist.radio.aosp_usr_pref_sel=true
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -235,7 +229,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Tcp
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tcp.2g_init_rwnd=10
-	
+
+# UI
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.use_fifo_ui=1
+
 #Trim properties
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.qti.sys.fw.use_trim_settings=true \

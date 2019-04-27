@@ -600,7 +600,7 @@ on property:ro.data.large_tcp_window_size=true
 service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
     user radio
-    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
+    group radio cache inet misc audio sdcard_r sdcard_rw diag log
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service charger /sbin/chargeonlymode
@@ -656,4 +656,4 @@ service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     interface android.hardware.audio@2.0::IDevicesFactory default
 
 on property:dev.bootcomplete=1
-    setprop sys.io.scheduler "bfq"
+    swapon_all /vendor/etc/fstab.qcom
