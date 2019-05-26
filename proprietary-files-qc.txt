@@ -192,10 +192,10 @@ vendor/lib64/libssd.so
 vendor/lib/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/gatekeeper.msm8953.so
 
-# GPS
+# GPS - from LA.UM.7.6.r1-04300-89xx.0
 vendor/bin/hw/vendor.qti.gnss@1.0-service
 vendor/bin/loc_launcher
-vendor/bin/lowi-server
+vendor/bin/lowi-server|8b1c2dbe97fb69f9ce498c5575826e0f6c620d95
 vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
 vendor/etc/cacert_location.pem
@@ -203,7 +203,7 @@ vendor/etc/init/vendor.qti.gnss@1.0-service.rc
 vendor/etc/xtra_root_cert.pem
 vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so
 vendor/lib64/libalarmservice_jni.so
-vendor/lib64/libdataitems.so
+vendor/lib64/libdataitems.so|54558dfc6eefbeae70db6da0c1eceed6e705ccda
 vendor/lib64/libdrplugin_client.so
 vendor/lib64/lib_drplugin_server.so
 vendor/lib64/libDRPlugin.so
@@ -212,17 +212,17 @@ vendor/lib64/libflp.so
 vendor/lib64/libgdtap.so
 vendor/lib64/libgeofence.so
 vendor/lib64/libizat_client_api.so
-vendor/lib64/libizat_core.so
-vendor/lib64/liblbs_core.so
+vendor/lib64/libizat_core.so|6d0ae41cfaaa1c06d32a07e6e808f7de84c51347
+vendor/lib64/liblbs_core.so|ec2049b7cd506df7c88bdaef5de646a335b35f46
 -vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_ds_api.so
 vendor/lib64/libloc_externalDr.so
 vendor/lib64/liblocationservice.so
-vendor/lib64/liblocationservice_glue.so
+vendor/lib64/liblocationservice_glue.so|ba147f1a5b1f3191b6b3103b7c566b954ce67c15
 vendor/lib64/liblowi_client.so
-vendor/lib64/liblowi_wifihal.so
+vendor/lib64/liblowi_wifihal.so|cf615f1cf64d2e2a38e618044fc0d9b9df3165bf
 vendor/lib64/libquipc_os_api.so
-vendor/lib64/libslimclient.so
+vendor/lib64/libslimclient.so|8ea21e0ec44e492f09869e6fe19bc51e1548c2ac
 vendor/lib64/libulp2.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_ulp_adaptor.so

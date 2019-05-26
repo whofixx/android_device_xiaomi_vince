@@ -1,3 +1,5 @@
+typeattribute hal_fingerprint_default binder_in_vendor_violators, data_between_core_and_vendor_violators;
+
 type_transition hal_fingerprint_default system_data_file:{ dir file } gx_fpd_data_file;
 
 add_service(hal_fingerprint_default, goodix_fingerprint_vndservice);
@@ -25,3 +27,9 @@ allow hal_fingerprint_default gx_fpd_data_file:file create_file_perms;
 allow hal_fingerprint_default storage_file:dir { search };
 allow hal_fingerprint_default storage_file:lnk_file { read };
 allow hal_fingerprint_default mnt_user_file:dir { search };
+allow hal_fingerprint_default mnt_user_file:lnk_file { read };
+allow hal_fingerprint_default sdcardfs:dir { search };
+allow hal_fingerprint_default sdcardfs:file { open };
+allow hal_fingerprint_default sdcardfs:file { read append };
+allow hal_fingerprint_default sdcardfs:file { getattr };
+allow hal_fingerprint_default mnt_user_file:file { getattr };

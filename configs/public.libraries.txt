@@ -1,5 +1,0 @@
-libqti-perfd-client.so
-libadsprpc.so
-libmdsprpc.so
-
-libOpenCL.so

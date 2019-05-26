@@ -11,6 +11,8 @@
 /data/fpc(/.*)?					u:object_r:fpc_data_file:s0
 /dev/socket/fpce(/.*)?				u:object_r:fpce_socket:s0
 /sys/devices/soc/soc:fpc1020(/.*)?		u:object_r:fpc_sysfs:s0
+/storage/emulated/0/MIUI/debug_log/1.dat	u:object_r:sdcardfs:s0
+/data/media/0/MIUI/debug_log/1.dat		u:object_r:media_rw_data_file:s0
 
 # Goodix Fingerprint
 /dev/goodix_fp					u:object_r:gx_fpd_device:s0
