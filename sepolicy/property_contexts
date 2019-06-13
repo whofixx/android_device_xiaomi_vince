@@ -1,4 +1,4 @@
 persist.net.doxlat                              u:object_r:vendor_xlat_prop:s0
-persist.vendor.camera.debug.logfile		u:object_r:camera_prop:s0
+persist.camera.debug.logfile			u:object_r:default_prop:s0
 sys.fp.goodix					u:object_r:fingerprint_prop:s0
 sys.fp.vendor                                   u:object_r:fingerprint_prop:s0
